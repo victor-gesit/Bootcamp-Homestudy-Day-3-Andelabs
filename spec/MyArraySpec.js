@@ -1,4 +1,7 @@
-
+var MyArray = new MyArray();
+var oneToTwenty = MyArray.toTwenty;
+var twoToForty = MyArray.toForty;
+var tenToOneThousand = MyArray.toOneThousand;
 describe('Binary Search to traverse an ordered list, effectively', function() {
   describe('Populate the arrays with valid content', function() {
     
