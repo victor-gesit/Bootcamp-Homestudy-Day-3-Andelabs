@@ -1,0 +1,25 @@
+{
+  "name": "bootcamp-homestudy-day-3-andelabs",
+  "version": "1.0.0",
+  "description": "Bootcamp Homestudy, Day 3, Andelabs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor4l/Bootcamp-Homestudy-Day-3-Andelabs.git"
+  },
+  "keywords": [
+    "Homestudy",
+    "Andelabs",
+    "Day",
+    "3"
+  ],
+  "author": "Victor Idongesit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victor4l/Bootcamp-Homestudy-Day-3-Andelabs/issues"
+  },
+  "homepage": "https://github.com/victor4l/Bootcamp-Homestudy-Day-3-Andelabs#readme"
+}
