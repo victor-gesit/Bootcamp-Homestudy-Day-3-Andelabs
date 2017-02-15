@@ -34,11 +34,11 @@ describe("Find missing number two lists: ", function() {
     it("should return 10 for [4, 6, 8],[4, 6, 8, 10]", function() {
       expect(findMissing([4, 6, 8], [4, 6, 8, 10])).toEqual(10);
     });
-
+    
     it("should return 1 for [5, 4, 7, 6, 11, 66],[5, 4, 1, 7, 6, 11, 66]", function() {
-      expect(findMissing([5, 4, 7, 6, 11, 66], [5, 4, 1, 7, 6, 11, 66])).toEqual(1);
+      expect(findMissing([5, 4, 7, 6, 11, 66], [5, 4, 7, 7, 6, 11, 66])).toEqual(7);
     });
-
+    
   });
 
 });
