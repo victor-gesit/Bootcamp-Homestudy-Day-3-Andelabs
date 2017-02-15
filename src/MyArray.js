@@ -13,6 +13,7 @@ function MyArray(){
     }
     return forties;
   };
+
   Array.prototype.toOneThousand = function(){
     const thousands = [];
     for(var k = 10; k <= 1000; k+=10){
@@ -24,8 +25,9 @@ function MyArray(){
   this.count = -1;
   const result = {};
 
-  Array.prototype.search = function(){
+  Array.prototype.search = function(t){
 
+    const a = this;
     var l = 0;
     var r = a.length - 1;
     var found = false;
@@ -33,28 +35,40 @@ function MyArray(){
     var index = -1;
 
     while(!found){
-      counter +=1;
       if(l > r){
         result.index = -1;
-        reslt.count = counter;
-        result.length = this.length;
+        result.count = counter;
+        result.length = a.length;
         break;
       }
+
       var m = Math.floor((l+r)/2);
+
+      if(t === a[a.length-1]){
+        result.index = a.length-1;
+        result.count = counter;
+        result.length = a.length;
+        break;
+      }
       if(a[m] < t){
         l = m+1;
       } else if(a[m] > t){
         r = m-1;
       } else {
         found = true;
-        index = m;
         result.count = counter;
         result.index = m;
-        result.length = this.length;
+        result.length = a.length;
       }
+      counter +=1;
     }
     return result;
-}
+  }
+  /*
   Array.prototype.index = 10;
   Array.prototype.length 
+  */
+  Array.prototype.indexOf = function () {
+    throw new Error('You are not allowed to use the indexOf function');
+  };
 }
