@@ -52,10 +52,8 @@ function MyArray(){
       }
       if(a[mid] < target){
         min = mid+1;
-        //r--;
       } else if(a[mid] > target){
         max = mid-1;
-        //l++;
       } else {
         found = true;
         result.count = counter;
@@ -66,7 +64,6 @@ function MyArray(){
     }
     return result;
   }
-
   Array.prototype.indexOf = function () {
     throw new Error('You are not allowed to use the indexOf function');
   };

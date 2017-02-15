@@ -1,8 +1,5 @@
 function FindMissing(){
 	this.findMissing = function(arr1, arr2){
-
-		
-		//This way of doing this wouldn't work for the last test. I am yet to know why.
 		arr1 = arr1.sort();
 		var missing;
 		for(var i = 0; i < arr2.length; i++){
@@ -17,8 +14,7 @@ function FindMissing(){
 	}
 	// binarySearch is modified to return the item if it's not found in the specified array.
 	
-	function binarySearch(array,target){
-		var sortedArray = array.sort();
+	function binarySearch(sortedArray,target){
 	    var min = 0;
 	    var max = sortedArray.length - 1;
 	    var found = false;
