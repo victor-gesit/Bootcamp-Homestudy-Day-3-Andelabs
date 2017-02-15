@@ -25,46 +25,48 @@ function MyArray(){
   this.count = -1;
   const result = {};
 
-  Array.prototype.search = function(t){
+  Array.prototype.search = function(target){
 
     const a = this;
-    var l = 0;
-    var r = a.length - 1;
+    var min = 0;
+    var max = a.length - 1;
     var found = false;
     var counter= 0;
     var index = -1;
 
     while(!found){
-      if(l > r){
+      if(min > max){
         result.index = -1;
         result.count = counter;
         result.length = a.length;
         break;
       }
 
-      var m = Math.floor((l+r)/2);
+      var mid = Math.floor((min+max)/2);
 
-      if(t === a[a.length-1]){
+      if(target === a[a.length-1]){
         result.index = a.length-1;
         result.count = counter;
         result.length = a.length;
         break;
       }
-      if(a[m] < t){
-        l = m+1;
-      } else if(a[m] > t){
-        r = m-1;
+      if(a[mid] < target){
+        min = mid+1;
+        //r--;
+      } else if(a[mid] > target){
+        max = mid-1;
+        //l++;
       } else {
         found = true;
         result.count = counter;
-        result.index = m;
+        result.index = mid;
         result.length = a.length;
       }
       counter +=1;
     }
     return result;
   }
-  
+
   Array.prototype.indexOf = function () {
     throw new Error('You are not allowed to use the indexOf function');
   };

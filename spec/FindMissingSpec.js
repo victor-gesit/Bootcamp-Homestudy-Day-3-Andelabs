@@ -36,7 +36,7 @@ describe("Find missing number two lists: ", function() {
     });
     
     it("should return 1 for [5, 4, 7, 6, 11, 66],[5, 4, 1, 7, 6, 11, 66]", function() {
-      expect(findMissing([5, 4, 7, 6, 11, 66], [5, 4, 7, 7, 6, 11, 66])).toEqual(7);
+      expect(findMissing([5, 4, 7, 6, 11, 66], [5, 4, 1, 7, 6, 11, 66])).toEqual(1);
     });
     
   });
