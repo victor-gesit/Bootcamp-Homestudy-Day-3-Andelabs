@@ -21,19 +21,23 @@ function MyArray(){
     return thousands;
   };
 
-  var count;
-  var result = {};
-  
+  this.count = -1;
+  const result = {};
+
   Array.prototype.search = function(){
+
     var l = 0;
     var r = a.length - 1;
     var found = false;
     var counter= 0;
     var index = -1;
+
     while(!found){
       counter +=1;
       if(l > r){
-        index = -1;
+        result.index = -1;
+        reslt.count = counter;
+        result.length = this.length;
         break;
       }
       var m = Math.floor((l+r)/2);
@@ -43,9 +47,13 @@ function MyArray(){
         r = m-1;
       } else {
         found = true;
-        return m;
+        index = m;
+        result.count = counter;
+        result.index = m;
+        result.length = this.length;
       }
     }
+    return result;
 }
   Array.prototype.index = 10;
   Array.prototype.length 
